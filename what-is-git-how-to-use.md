@@ -102,3 +102,18 @@ And then this will revert your file to the version associated with "Notes on how
 git checkout master
 ```
 And this will then return you to the latest commit.
+
+Ok one more thing. Suppose you want to eliminate the previous commit and return the master to some earlier point. Note, this will permanently revert back, once you do it, all is lost(?)
+```
+git reset --hard 902d88
+```
+And then if you check the log, this will take you to
+```
+$ git log --pretty=oneline
+982d88729ca4848819c51bf5b5f8f692bd6c8b49 (HEAD -> master, origin/master, origin/HEAD) Notes on how to use git
+87cd42e4753e7bf55c83ba4733236f4084000fcd First Commit
+01c0b612d80294360d80519b82e28430b3878bb2 Initial commit
+```
+which reverts everything back to the point where the master is not 982d88.
+
+Make sense? 
