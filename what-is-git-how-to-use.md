@@ -93,4 +93,12 @@ $ git log --pretty=oneline
 87cd42e4753e7bf55c83ba4733236f4084000fcd First Commit
 01c0b612d80294360d80519b82e28430b3878bb2 Initial commit
 ```
-Now the key thing to note are the number/letter combinations, these are recording the different committed versions. Not lets suppose that we want to return to a previous version. In that case you use the "checkout" command. 
+Now the key thing to note are the number/letter combinations, these are recording the different committed versions. Not lets suppose that we want to return to a previous version. In that case you use the "checkout" command.
+```
+git checkout 902d88
+```
+And then this will revert your file to the version associated with "Notes on how to use git" commit. This is nice to see what you did in the past, etc. Then if you want to go back, you just do
+```
+git checkout master
+```
+And this will then return you to the latest commit.
