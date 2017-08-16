@@ -6,7 +6,7 @@ Git is a version control system. The basic idea is that it is a system which wil
 
 It is very simple to download.
 
-* Go [here](https://git-scm.com/) and follow the instructions... I don't know much so I just followed the default options. 
+* Go [here](https://git-scm.com/) and follow the instructions... I don't know much so I just followed the default options.
 * Open GitBash which is basically the command line/terminal part of git. And enter the following commands which will assign you a username and an email. This will be relevant when interfacing with GitHUB
 
 ```
@@ -14,15 +14,15 @@ git config --global user.name "username"
 git config --global user.email "username@email.com"
 ```
 
-I'm going to jump ahead here. I need to insert how to initialize a repository, basic commands, etc. 
+I'm going to jump ahead here. I need to insert how to initialize a repository, basic commands, etc.
 
 **How to interface with GitHub**
 
 ----------
 
-I've been using GitHub for awhile as a place to store polished code. Below, let me talk through about how to work with git, GitHub, and then files on your computer. 
+I've been using GitHub for awhile as a place to store polished code. Below, let me talk through about how to work with git, GitHub, and then files on your computer.
 
-First, what I like to do is to create a separate file called GitHub on my computer. It is from here that anything git related will be performed on. This maybe violating the spirit of the use of git, but bear with me, I do this a lot. 
+First, what I like to do is to create a separate file called GitHub on my computer. It is from here that anything git related will be performed on. This maybe violating the spirit of the use of git, but bear with me, I do this a lot.
 
 Then in GitBash I change the directory so that it is operating within, I do this so...
 
@@ -49,7 +49,7 @@ where the first line changes the directory, the second line asks what is going o
 git log --pretty=oneline
 ```
 
-which then is going to show the different records associated with this file. Note all the number/letter combinations, these are codes that track the different commits made. 
+which then is going to show the different records associated with this file. Note all the number/letter combinations, these are codes that track the different commits made.
 
 Let me do a couple of more things. I'm going to modify one of the files. Then it is worth seeing what is going on by asking about the status.
 
@@ -57,7 +57,7 @@ Let me do a couple of more things. I'm going to modify one of the files. Then it
 git status
 ```
 
-It will show a message that will say to the effect...as far as git is concerned the relevant files they have is the master, but there is changed file that has not been committed. 
+It will show a message that will say to the effect...as far as git is concerned the relevant files they have is the master, but there is changed file that has not been committed.
 
 Ok so how do we commit. This is a key aspect of the git, we have made a change and are going to commit it to the record. To do so you go
 
@@ -74,7 +74,7 @@ Now I'm going to send the change back to GitHub the code repository. To do so I 
 git push --all
 ```
 
-which then pushes these files back to where they came from. Here a window may pop up asking for your username and login for GitHub. 
+which then pushes these files back to where they came from. Here a window may pop up asking for your username and login for GitHub.
 
 Here is something interesting to do, on another computer pull the folder and then check the status. What do you see? It should be something like, the origin master has the thing showing "a test".
 
@@ -84,22 +84,13 @@ Here is something interesting to do, on another computer pull the folder and the
 
 Ok, so this is one of the more important aspects of git. Let me walk through some commands to get a sense of what is possible.
 
-First, as usual checkout the status and then the 
+First, checkout the log and below I'm printing the output
 
 ```    
-test code
-
-```
 $ git log --pretty=oneline
 9c935cbfa518847cfdc950d5d21a125f6a87a74f (HEAD -> master, origin/master, origin/HEAD) Updated Git notes
 982d88729ca4848819c51bf5b5f8f692bd6c8b49 Notes on how to use git
 87cd42e4753e7bf55c83ba4733236f4084000fcd First Commit
 01c0b612d80294360d80519b82e28430b3878bb2 Initial commit
-
-   
-`$ git log --pretty=oneline
-9c935cbfa518847cfdc950d5d21a125f6a87a74f (HEAD -> master, origin/master, origin/HEAD) Updated Git notes
-982d88729ca4848819c51bf5b5f8f692bd6c8b49 Notes on how to use git
-87cd42e4753e7bf55c83ba4733236f4084000fcd First Commit
-01c0b612d80294360d80519b82e28430b3878bb2 Initial commit
-    
+```
+Now the key thing to note are the number/letter combinations, these are recording the different committed versions. Not lets suppose that we want to return to a previous version. In that case you use the "checkout" command. 
