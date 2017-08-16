@@ -10,7 +10,7 @@ It is very simple to download.
 * Open GitBash which is basically the command line/terminal part of git. And enter the following commands which will assign you a username and an email. This will be relevant when interfacing with GitHUB
 
 ```
-git config --global user.name "username"
+git config --global user.name "username"    
 git config --global user.email "username@email.com"
 ```
 
@@ -78,5 +78,28 @@ which then pushes these files back to where they came from. Here a window may po
 
 Here is something interesting to do, on another computer pull the folder and then check the status. What do you see? It should be something like, the origin master has the thing showing "a test".
 
+**How to Change Versions**
 
+----------
 
+Ok, so this is one of the more important aspects of git. Let me walk through some commands to get a sense of what is possible.
+
+First, as usual checkout the status and then the 
+
+```    
+test code
+
+```
+$ git log --pretty=oneline
+9c935cbfa518847cfdc950d5d21a125f6a87a74f (HEAD -> master, origin/master, origin/HEAD) Updated Git notes
+982d88729ca4848819c51bf5b5f8f692bd6c8b49 Notes on how to use git
+87cd42e4753e7bf55c83ba4733236f4084000fcd First Commit
+01c0b612d80294360d80519b82e28430b3878bb2 Initial commit
+
+   
+`$ git log --pretty=oneline
+9c935cbfa518847cfdc950d5d21a125f6a87a74f (HEAD -> master, origin/master, origin/HEAD) Updated Git notes
+982d88729ca4848819c51bf5b5f8f692bd6c8b49 Notes on how to use git
+87cd42e4753e7bf55c83ba4733236f4084000fcd First Commit
+01c0b612d80294360d80519b82e28430b3878bb2 Initial commit
+    
