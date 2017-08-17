@@ -7,7 +7,7 @@ Git is a version control system. The basic idea is that it is a system which wil
 It is very simple to download.
 
 * Go [here](https://git-scm.com/) and follow the instructions... I don't know much so I just followed the default options.
-* Open GitBash which is basically the command line/terminal part of git. And enter the following commands which will assign you a username and an email. This will be relevant when interfacing with GitHUB
+* Open the command prompt or GitBash (which is basically the command line/terminal part of git). And enter the following commands which will assign you a username and an email. This will be relevant when interfacing with GitHUB
 
 ```
 git config --global user.name "username"    
@@ -116,4 +116,4 @@ $ git log --pretty=oneline
 ```
 which reverts everything back to the point where the master is not 982d88.
 
-Make sense? 
+Make sense?
