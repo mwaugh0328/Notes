@@ -4,7 +4,11 @@ I'm still not sure! But here is my attempt at explaining what I know...
 
 Git is a version control system. The basic idea is that it is a system which will record the changes made to a file. For example, as you modify and develop code, this is a way to retain the older version of your code, track the changes, and more! I'm still not at the more part... One final point: Git is local to your computer. This is what will distinguish it from GitHub which is a code/file/data repository that can store the code and the changes made on the world wide web.
 
-It is very simple to download.
+Here are some good (much better than mine) notes by the quant econ guys.
+
+https://github.com/jstac/quantecon_nyu_2016/blob/master/lecture2/git_intro/gitnotes.md
+
+Step one-it is very simple to download....
 
 * Go [here](https://git-scm.com/) and follow the instructions... I don't know much so I just followed the default options.
 * Open the command prompt or GitBash (which is basically the command line/terminal part of git). And enter the following commands which will assign you a username and an email. This will be relevant when interfacing with GitHUB
