@@ -120,4 +120,12 @@ $ git log --pretty=oneline
 ```
 which reverts everything back to the point where the master is not 982d88.
 
-Make sense?
+**How to Add Files**
+
+---
+Another important aspect of git. Ok so you save a new file or create a new folder within your repository. If you do `git status` you should see a message that says something to the following effect: on master, but there are untracked files within the repository. You want git to track those files, so what you need to do is to add them. The command is simple...
+
+```
+git add .
+```
+which says add files and then the `.` means add all untracked files in the repository. Then check the status again. It should say something to the effect that there you are on the master but that there are changes to be committed, and these changes shown should enumerate all the files you wanted to add. Now you just commit and you are done!
