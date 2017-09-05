@@ -1,4 +1,4 @@
-** Atom**
+**Atom**
 
 *How do I work?* One new part of my workflow is the use of [Atom](https://atom.io/) which is a very nice, very functional, user friendly text editor.
 
@@ -10,7 +10,7 @@ Third, a text editor is always important for certain programing purposes. Given 
 
 One final point---Atom is free and appears to have a substantive community behind it. This means that the price is right and you won't be left helpless if you have a problem or there is a problem with Atom.
 
-** Two useful Atom Packages **
+**Two useful Atom Packages**
 
 - Table viewer. This is the [Tablr package](https://atom.io/packages/tablr) As mentioned above, this will open up `.csv` files and show it in a table format, much like excel. To install simply write this on the command line
 ```
