@@ -129,3 +129,12 @@ Another important aspect of git. Ok so you save a new file or create a new folde
 git add .
 ```
 which says add files and then the `.` means add all untracked files in the repository. Then check the status again. It should say something to the effect that there you are on the master but that there are changes to be committed, and these changes shown should enumerate all the files you wanted to add. Now you just commit and you are done!
+
+**How to Get Rid of Files**
+
+First, this is dangerous territory, so be sure to know what you are doing before hand. So sometimes you want to reorganize your repository---this may include deleting files. What are the commands to do so. So something like
+
+```
+git rm your-file-to-delete
+```
+will do the trick. 

@@ -24,3 +24,8 @@ apm install tool-bar markdown-writer
 apm install tool-bar-markdown-writer
 ```
 Then when you open up a markdown file, the tool bar should be on the top.
+
+- Markdown preview plus. This is an updated markdown previewer with the enhancement that it allows one to write math in LaTex. Very nice. All you do is use dollar signs (one, then math, the another for inline; two, then math, then two more for separate line. I think you need to disable the other markdown previewer before using (you do that by going file, settings, then finding the markdown previewer package and disabling). How to you install:
+```
+apm install markdown-previewer-plus
+```
