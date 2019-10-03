@@ -176,7 +176,7 @@ nothing to commit, working tree clean
 ```
 Notice what it says, the "branch" you are working on is ahead of the master (what you pulled from GitHub).
 
-Now the next step is how to get the new file up to the code respository on GitHub. This is the second very important command which is the push.
+Now the next step is how to get the new file up to the code repository on GitHub. This is the second very important command which is the push.
 
 Now I'm going to send the change back to GitHub the code repository. To do so I do
 
