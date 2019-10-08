@@ -210,7 +210,83 @@ Then go in a browser to [https://github.com/mwaugh0328/ra_work_fall_2019](https:
 
 ---
 
-### Advanced stuff---ignore for now
+So far so good. Now what we want to do is to pull and track changes.
+
+**Important** Before you start working on a project, it is generally best practice to ``pull`` from the repository. That ensures that whatever you are working on, you are starting from the origin/master file. If not, then your file will deviate from the origin/master and work will have to be done later to merge the two and ensure they are consistent.
+
+Ok, so how do I pull? Simple: in the terminal, with the rood being the folder we are working from we just type ``git pull`` and below is what the output looks like
+
+```
+jupyter@15400f29a939:~/ra_work_fall_2019$ git pull
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 9 (delta 3), reused 9 (delta 3), pack-reused 0
+Unpacking objects: 100% (9/9), done.
+From https://github.com/mwaugh0328/ra_work_fall_2019
+   7ff4a18..f36653c  master     -> origin/master
+Updating 7ff4a18..f36653c
+Fast-forward
+ pandas_basics.ipynb    | 3887 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ pandas_the_index.ipynb | 6812 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 10699 insertions(+)
+ create mode 100644 pandas_basics.ipynb
+ create mode 100644 pandas_the_index.ipynb
+ ```
+Essentially (in my case) what this is doing is pulling down the two new files that you had pushed up there last week. Now they are locally on my computer/sever. And now I can start to work on them.
+
+When do you ``pull``? Obviously the first time you start working on stuff again. Also when someone tells you, "hey I fixed this part of the code and pushed it, now its ready for you to grab it" Then what do you do you can pull it.
+
+**Tracking changes** There are a lot of ways to do this. This is the way I find easiest.
+ - First, go to [https://github.com/mwaugh0328/ra_work_fall_2019](https://github.com/mwaugh0328/ra_work_fall_2019) and click on ``pandas_the_index.ipynb`` (this is the file that I changed)
+
+ - Second, to the upper right, below the find file and copy path buttons you should see a letter number combination. It should be ``f36653c`` This letter/number combination is the value that is associated with the last commit (each commit is assigned a long number/letter combination). Now click on it.
+
+ - What you should see is a snipit of the code showing you before (on the left panel) and after (on the right panel). Additions are highlighted with green. Subtractions/Deletions are highlighted with red. (Here there is only green). This shows you that I added a cell to your notebook saying something about the addition I made.
+
+ - **Exercise:** Can you delete something in the notebook (like a cell)? Then commit the file. Push it to the repository and find the change that you made using the approach I described above.
+
+ **Why are we doing this** The tracking changes is a life saver in the sense that as things get complicated, we can see where changes are being made and, if things get broken, resolve why they may have gotten Broken.
+
+ Also notice that you can see the whole history of changes. So if you go to the file again ``pandas_the_index.ipynb`` and hit the button history (below the letter/number combination). This will take you to a window which will show **all the commits** and then you can click on the letter/number combination with each commit and see what happened.
+
+Finally, you can see this stuff within the terminal as well. In fact, you can also revert the files to a specific point within the terminal as well. Let me just show you a little bit:
+
+In the terminal type ``git log --pretty=oneline`` and you should see something like this:
+
+```
+jupyter@15400f29a939:~/ra_work_fall_2019$ git log --pretty=oneline
+f36653cdb9e9d8620aaf08a8fc17eb127aa2e015 (HEAD -> master, origin/master, origin/HEAD) mike made a change
+1bac35439d290ba049b0546018e24deac8920d75 adding Corey's the-index example's
+ee908204419ce5351dbd02986a2cfaaeacb0c681 adding Corey's pandas basics example's
+7ff4a183531d66c117ca2a017a66df1f22ebd97d adding mikes notebook
+e8595faafeafe8fdd55ab15405270504e1122bda Initial commit
+jupyter@15400f29a939:~/ra_work_fall_2019$
+```
+
+which gives a listing of the previous commits.  
+
+**I want to go back to an old file**
+
+There are several ways to do this. One is that you can revert you repository to a previous commit. This is not my preferred approach. The other is again to use the repository, there when you look at the history of the files you can go into that commit and then download the specific file (associated with the older commits) and work on it, etc.  This may be vauge, but if we ever git to this point, we can work on it together.
+
+
+**How to Get Rid of Files**
+
+First, this is **dangerous territory**, so be sure to know what you are doing before hand. So sometimes you want to reorganize your repository---this may include deleting files. What are the commands to do so. So something like
+
+```
+git rm your-file-to-delete
+```
+will do the trick.
+
+
+
+
+---
+### Advanced stuff---Keep ignoring
+
+I rarely do this stuff. 
 
 
 **How to Change Versions**
@@ -258,12 +334,3 @@ Another important aspect of git. Ok so you save a new file or create a new folde
 git add .
 ```
 which says add files and then the `.` means add all untracked files in the repository. Then check the status again. It should say something to the effect that there you are on the master but that there are changes to be committed, and these changes shown should enumerate all the files you wanted to add. Now you just commit and you are done!
-
-**How to Get Rid of Files**
-
-First, this is dangerous territory, so be sure to know what you are doing before hand. So sometimes you want to reorganize your repository---this may include deleting files. What are the commands to do so. So something like
-
-```
-git rm your-file-to-delete
-```
-will do the trick.
